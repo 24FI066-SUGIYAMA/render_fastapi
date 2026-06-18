@@ -38,13 +38,56 @@ def omikuji():
 def index():
     html_content = """
     <html>
-        <head>
-            <title>Some HTML in here</title>
-        </head>
-        <body>
+    <head>
+        <title>My Personal Page</title>
+        <style>
+            body { 
+                font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif; 
+                text-align: center; 
+                padding-top: 60px; 
+                background-color: #f8f9fa; 
+                color: #333333; 
+                line-height: 1.6;
+            }
+            .container {
+                background-color: #ffffff;
+                padding: 40px;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+                display: inline-block;
+                max-width: 500px;
+                width: 90%;
+            }
+            h1 { 
+                color: #0056b3; 
+                font-size: 2rem; 
+                margin-bottom: 20px;
+            }
+            p { 
+                color: #666666; 
+                font-size: 1.1rem; 
+                margin: 10px 0;
+            }
+            .info {
+                margin-top: 20px;
+                padding-top: 20px;
+                border-top: 1px solid #e9ecef;
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
             <h1>Look ma! HTML!</h1>
-        </body>
-    </html>
+            <p>ホームページ・メイカーの課題ページです。</p>
+            
+            <div class="info">
+                <p><strong>現在のステータス:</strong> FastAPIを使ってAPIサーバーを構築し、HTMLの返却テストを行っています。</p>
+                <p><strong>動作状況:</strong> Renderにデプロイし、正常にWebページが公開されました。</p>
+            </div>
+        </div>
+    </body>
+</html>
     """
     return HTMLResponse(content=html_content, status_code=200)
 
