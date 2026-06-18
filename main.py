@@ -28,4 +28,4 @@ def omikuji():
         "大凶 - \"大凶。厳しい状況が訪れるかもしれませんが、乗り越えましょう。\""
     ]
 
-    return omikuji_list[random.randrange(10)]
+    return omikuji_list[random.randrange(8)]
