@@ -1,6 +1,7 @@
 from typing import Optional
 
 from fastapi import FastAPI
+from fastapi.responses import HTMLResponse
 
 import random  # randomライブラリを追加
 
@@ -31,8 +32,6 @@ def omikuji():
     return omikuji_list[random.randrange(8)]
 
 
-    from fastapi.responses import HTMLResponse
-
 ### コードいろいろ... ###
 
 @app.get("/index")
@@ -48,3 +47,4 @@ def index():
     </html>
     """
     return HTMLResponse(content=html_content, status_code=200)
+
