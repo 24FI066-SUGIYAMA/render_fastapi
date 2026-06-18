@@ -39,10 +39,9 @@ def index():
     html_content = """
     <html>
     <head>
-        <title>My Personal Page</title>
+        <title>Some HTML in here</title>
         <style>
             body { 
-                font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif; 
                 text-align: center; 
                 padding-top: 60px; 
                 background-color: #f8f9fa; 
@@ -90,4 +89,8 @@ def index():
 </html>
     """
     return HTMLResponse(content=html_content, status_code=200)
+
+@app.post("/present")
+async def give_present(present):
+    return {"response": f"サーバです。メリークリスマス！ {present}ありがとう。お返しはキャンディーです。"}  # f文字列というPythonの機能を使っている
 
